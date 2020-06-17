@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -300,7 +301,9 @@ public class NewsController {
 			//若不存在改目录，则创建目录
 			savePathFile.mkdir();
 		}
-		String filename = new Date().getTime()+"."+suffix;
+		Date date=new Date();//此时date为当前的时间
+		SimpleDateFormat dateFormat=new SimpleDateFormat("YYYY-MM-dd");//设置当前时间的格式，为年-月-日
+		String filename = dateFormat.format(date)+"."+suffix;
 		try {
 			//将文件保存至指定目录
 			photo.transferTo(new File(savePath+filename));

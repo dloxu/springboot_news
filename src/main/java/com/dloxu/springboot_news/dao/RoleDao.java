@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Description:½ÇÉ«role dao
+ * Description:è§’è‰²role dao
  * @author   dloxu
  * @param
  * @return

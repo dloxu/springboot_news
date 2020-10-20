@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 /**
- * Description:系统日志
+ * Description:绯荤粺鏃ュ織
  * @author   dloxu
  * @param
  * @return
@@ -15,9 +15,9 @@ import java.util.Date;
 public class Log {
 	private Long id;
 	
-	private String content;//日志内容
+	private String content;//鏃ュ織鍐呭
 	
-	private Date createTime;//创建时间
+	private Date createTime;//鍒涘缓鏃堕棿
 
 	public Long getId() {
 		return id;

@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Description:ºóÌ¨µÇÂ¼À¹½ØÆ÷
+ * Description:åå°ç™»å½•æ‹¦æˆªå™¨
  * @author   dloxu
  * @param
  * @return
@@ -23,7 +23,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
 
 	/**
-	 * Description:afterCompletionÊÇÔÚäÖÈ¾ÊÓÍ¼Íê³ÉÖ®ºóÊ¹ÓÃ
+	 * Description:afterCompletionæ˜¯åœ¨æ¸²æŸ“è§†å›¾å®Œæˆä¹‹åä½¿ç”¨
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -38,7 +38,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 	}
 
 	/**
-	 * Description:postHandlerÔÚµ÷ÓÃController·½·¨Ö®ºó¡¢ÊÓÍ¼äÖÈ¾Ö®Ç°µ÷ÓÃ
+	 * Description:postHandleråœ¨è°ƒç”¨Controlleræ–¹æ³•ä¹‹åã€è§†å›¾æ¸²æŸ“ä¹‹å‰è°ƒç”¨
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -53,7 +53,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
 
 	/**
-	 * Description: preHandleÊÇÔÚÇëÇócontrollorÇ°µ÷ÓÃ
+	 * Description: preHandleæ˜¯åœ¨è¯·æ±‚controllorå‰è°ƒç”¨
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -66,23 +66,23 @@ public class LoginInterceptor implements HandlerInterceptor {
 		String requestURI = request.getRequestURI();
 		Object admin = request.getSession().getAttribute("admin");
 		if(admin == null){
-			//±íÊ¾Î´µÇÂ¼»òÕßµÇÂ¼Ê§Ğ§
-			System.out.println("Á´½Ó"+requestURI+"½øÈëÀ¹½ØÆ÷£¡");
+			//è¡¨ç¤ºæœªç™»å½•æˆ–è€…ç™»å½•å¤±æ•ˆ
+			System.out.println("é“¾æ¥"+requestURI+"è¿›å…¥æ‹¦æˆªå™¨ï¼");
 			String header = request.getHeader("X-Requested-With");
-			//ÅĞ¶ÏÊÇ·ñÊÇajaxÇëÇó
+			//åˆ¤æ–­æ˜¯å¦æ˜¯ajaxè¯·æ±‚
 			if("XMLHttpRequest".equals(header)){
-				//±íÊ¾ÊÇajaxÇëÇó
+				//è¡¨ç¤ºæ˜¯ajaxè¯·æ±‚
 				Map<String, String> ret = new HashMap<String, String>();
 				ret.put("type", "error");
-				ret.put("msg", "µÇÂ¼»á»°³¬Ê±»ò»¹Î´µÇÂ¼£¬ÇëÖØĞÂµÇÂ¼!");
+				ret.put("msg", "ç™»å½•ä¼šè¯è¶…æ—¶æˆ–è¿˜æœªç™»å½•ï¼Œè¯·é‡æ–°ç™»å½•!");
 //				response.getWriter().write(JSONObject.fromObject(ret).toString());
 				return false;
 			}
-			//±íÊ¾ÊÇÆÕÍ¨Á´½ÓÌø×ª£¬Ö±½ÓÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
+			//è¡¨ç¤ºæ˜¯æ™®é€šé“¾æ¥è·³è½¬ï¼Œç›´æ¥é‡å®šå‘åˆ°ç™»å½•é¡µé¢
 			response.sendRedirect(request.getServletContext().getContextPath() + "/system/login");
 			return false;
 		}
-		//»ñÈ¡²Ëµ¥id
+		//è·å–èœå•id
 		String mid = request.getParameter("_mid");
 		if(!StringUtils.isEmpty(mid)){
 			List<Menu> allThirdMenu = MenuUtil.getAllThirdMenu((List<Menu>)request.getSession().getAttribute("userMenus"), Long.valueOf(mid));

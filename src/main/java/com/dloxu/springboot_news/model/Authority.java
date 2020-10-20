@@ -3,7 +3,7 @@ package com.dloxu.springboot_news.model;
 import org.springframework.stereotype.Component;
 
 /**
- * Description:权限实体
+ * Description:鏉冮檺瀹炰綋
  * @author   dloxu
  * @param
  * @return
@@ -14,9 +14,9 @@ import org.springframework.stereotype.Component;
 public class Authority {
 	private Long id;
 	
-	private Long roleId;//角色id
+	private Long roleId;//瑙掕壊id
 	
-	private Long menuId;//菜单id
+	private Long menuId;//鑿滃崟id
 
 	public Long getId() {
 		return id;

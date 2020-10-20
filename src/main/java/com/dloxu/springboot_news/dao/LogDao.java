@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Description:系统日志类dao
+ * Description:绯荤粺鏃ュ織绫籨ao
  * @author   dloxu
  * @param
  * @return

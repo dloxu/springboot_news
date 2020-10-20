@@ -3,7 +3,7 @@ package com.dloxu.springboot_news.model;
 import org.springframework.stereotype.Component;
 
 /**
- * Description:新闻分类实体
+ * Description:鏂伴椈鍒嗙被瀹炰綋
  * @author   dloxu
  * @param
  * @return

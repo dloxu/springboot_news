@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Description:日志接口
+ * Description:鏃ュ織鎺ュ彛
  * @author   dloxu
  * @param
  * @return

@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Description:ĞÂÎÅ·ÖÀà¿ØÖÆÆ÷
+ * Description:æ–°é—»åˆ†ç±»æ§åˆ¶å™¨
  * @author   dloxu
  * @param
  * @return
@@ -31,7 +31,7 @@ public class NewsCategoryController {
 	private NewsCategoryService newsCategoryService;
 	
 	/**
-	 * Description:ĞÂÎÅ·ÖÀàÁĞ±íÒ³Ãæ
+	 * Description:æ–°é—»åˆ†ç±»åˆ—è¡¨é¡µé¢
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -44,7 +44,7 @@ public class NewsCategoryController {
 	}
 	
 	/**
-	 * Description:ĞÂÎÅ·ÖÀàÌí¼Ó
+	 * Description:æ–°é—»åˆ†ç±»æ·»åŠ 
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -56,26 +56,26 @@ public class NewsCategoryController {
 		Map<String,String> ret = new HashMap<String, String>();
 		if(newsCategory == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÕıÈ·µÄ·ÖÀàĞÅÏ¢£¡");
+			ret.put("msg", "è¯·å¡«å†™æ­£ç¡®çš„åˆ†ç±»ä¿¡æ¯ï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(newsCategory.getName())){
 			ret.put("type", "error");
-			ret.put("msg", "·ÖÀàÃû³Æ²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "åˆ†ç±»åç§°ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(newsCategoryService.add(newsCategory) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "·ÖÀàÌí¼ÓÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+			ret.put("msg", "åˆ†ç±»æ·»åŠ å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "Ìí¼Ó³É¹¦£¡");
+		ret.put("msg", "æ·»åŠ æˆåŠŸï¼");
 		return ret;
 	}
 	
 	/**
-	 * Description:ĞÂÎÅ·ÖÀàĞÅÏ¢±à¼­
+	 * Description:æ–°é—»åˆ†ç±»ä¿¡æ¯ç¼–è¾‘
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -87,26 +87,26 @@ public class NewsCategoryController {
 		Map<String,String> ret = new HashMap<String, String>();
 		if(newsCategory == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÕıÈ·µÄ·ÖÀàĞÅÏ¢£¡");
+			ret.put("msg", "è¯·å¡«å†™æ­£ç¡®çš„åˆ†ç±»ä¿¡æ¯ï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(newsCategory.getName())){
 			ret.put("type", "error");
-			ret.put("msg", "·ÖÀàÃû³Æ²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "åˆ†ç±»åç§°ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(newsCategoryService.edit(newsCategory) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "·ÖÀàĞŞ¸ÄÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+			ret.put("msg", "åˆ†ç±»ä¿®æ”¹å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "ĞŞ¸Ä³É¹¦£¡");
+		ret.put("msg", "ä¿®æ”¹æˆåŠŸï¼");
 		return ret;
 	}
 	
 	/**
-	 * Description:É¾³ıĞÂÎÅ·ÖÀà
+	 * Description:åˆ é™¤æ–°é—»åˆ†ç±»
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -118,27 +118,27 @@ public class NewsCategoryController {
 		Map<String,String> ret = new HashMap<String, String>();
 		if(id == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÑ¡ÔñÒªÉ¾³ıµÄ·ÖÀàĞÅÏ¢£¡");
+			ret.put("msg", "è¯·é€‰æ‹©è¦åˆ é™¤çš„åˆ†ç±»ä¿¡æ¯ï¼");
 			return ret;
 		}
 		try{
 			if(newsCategoryService.delete(id) <= 0){
 				ret.put("type", "error");
-				ret.put("msg", "·ÖÀàÉ¾³ıÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+				ret.put("msg", "åˆ†ç±»åˆ é™¤å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 				return ret;
 			}
 		}catch(Exception e){
 			ret.put("type", "error");
-			ret.put("msg", "¸Ã·ÖÀàÏÂÓĞĞÂÎÅĞÅÏ¢£¬²»¿ÉÉ¾³ı£¡");
+			ret.put("msg", "è¯¥åˆ†ç±»ä¸‹æœ‰æ–°é—»ä¿¡æ¯ï¼Œä¸å¯åˆ é™¤ï¼");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "ĞŞ¸Ä³É¹¦£¡");
+		ret.put("msg", "ä¿®æ”¹æˆåŠŸï¼");
 		return ret;
 	}
 	
 	/**
-	 * Description:·ÖÒ³Ä£ºıËÑË÷²éÑ¯ÁĞ±í
+	 * Description:åˆ†é¡µæ¨¡ç³Šæœç´¢æŸ¥è¯¢åˆ—è¡¨
 	 * @author   dloxu
 	 * @param
 	 * @return

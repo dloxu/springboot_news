@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 
 /**
- * Description:角色role实体
+ * Description:瑙掕壊role瀹炰綋
  * @author   dloxu
  * @param
  * @return
@@ -17,7 +17,7 @@ public class Role {
 	
 	private String name;
 	
-	private String remark;//角色备注
+	private String remark;//瑙掕壊澶囨敞
 
 	public Long getId() {
 		return id;

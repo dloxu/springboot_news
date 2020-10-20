@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Description:Ç°Ì¨ĞÂÎÅ¿ØÖÆÆ÷
+ * Description:å‰å°æ–°é—»æ§åˆ¶å™¨
  * @author   dloxu
  * @param
  * @return
@@ -40,7 +40,7 @@ public class HomeNewsController {
 	
 	
 	/**
-	 * Description:²é¿´ĞÂÎÅÏêÇé
+	 * Description:æŸ¥çœ‹æ–°é—»è¯¦æƒ…
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -54,13 +54,13 @@ public class HomeNewsController {
 		model.addObject("title", news.getTitle());
 		model.addObject("tags", news.getTags().split(","));
 		model.setViewName("home/news/detail");
-		//²é¿´Êı¼Ó1
+		//æŸ¥çœ‹æ•°åŠ 1
 		newsService.updateViewNumber(id);
 		return model;
 	}
 	
 	/**
-	 * Description:°´ÕÕ·ÖÀàÏÔÊ¾ĞÂÎÅÁĞ±í
+	 * Description:æŒ‰ç…§åˆ†ç±»æ˜¾ç¤ºæ–°é—»åˆ—è¡¨
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -79,13 +79,13 @@ public class HomeNewsController {
 		model.addObject("newsList", newsService.findList(queryMap));
 		NewsCategory newsCategory = newsCategoryService.find(cid);
 		model.addObject("newsCategory", newsCategory);
-		model.addObject("title", newsCategory.getName() + "·ÖÀàÏÂµÄĞÂÎÅĞÅÏ¢");
+		model.addObject("title", newsCategory.getName() + "åˆ†ç±»ä¸‹çš„æ–°é—»ä¿¡æ¯");
 		model.setViewName("home/news/category_list");
 		return model;
 	}
 	
 	/**
-	 * Description:»ñÈ¡°´ÆÀÂÛÊıÅÅĞòµÄ×îĞÂnÌõĞÅÏ¢
+	 * Description:è·å–æŒ‰è¯„è®ºæ•°æ’åºçš„æœ€æ–°næ¡ä¿¡æ¯
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -102,7 +102,7 @@ public class HomeNewsController {
 	
 	
 	/**
-	 * Description:·ÖÒ³»ñÈ¡Ä³¸ö·ÖÀàÏÂµÄÎÄÕÂ
+	 * Description:åˆ†é¡µè·å–æŸä¸ªåˆ†ç±»ä¸‹çš„æ–‡ç« 
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -124,7 +124,7 @@ public class HomeNewsController {
 	}
 	
 	/**
-	 * Description:»ñÈ¡ËÑË÷ÁĞ±í
+	 * Description:è·å–æœç´¢åˆ—è¡¨
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -141,14 +141,14 @@ public class HomeNewsController {
 		queryMap.put("title", keyword);
 		model.addObject("newsCategoryList", newsCategoryService.findAll());
 		model.addObject("newsList", newsService.findList(queryMap));
-		model.addObject("title", keyword + "¹Ø¼ü×ÖÏÂµÄĞÂÎÅĞÅÏ¢");
+		model.addObject("title", keyword + "å…³é”®å­—ä¸‹çš„æ–°é—»ä¿¡æ¯");
 		model.addObject("keyword", keyword);
 		model.setViewName("home/news/search_list");
 		return model;
 	}
 	
 	/**
-	 * Description:·ÖÒ³¼ÓÔØËÑË÷ÁĞ±í
+	 * Description:åˆ†é¡µåŠ è½½æœç´¢åˆ—è¡¨
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -170,7 +170,7 @@ public class HomeNewsController {
 	}
 	
 	/**
-	 * Description:Ìí¼ÓÆÀÂÛ
+	 * Description:æ·»åŠ è¯„è®º
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -184,37 +184,37 @@ public class HomeNewsController {
 		Role loginRole= (Role) request.getSession().getAttribute("role");
 		if (loginRole==null||loginUser==null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÏÈµÇÂ¼£¡");
+			ret.put("msg", "è¯·å…ˆç™»å½•ï¼");
 			return ret;
 		}
 		if(comment == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÍêÕûµÄÆÀÂÛĞÅÏ¢£¡");
+			ret.put("msg", "è¯·å¡«å†™å®Œæ•´çš„è¯„è®ºä¿¡æ¯ï¼");
 			return ret;
 		}
 		if(comment.getNewsId() == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÑ¡ÔñÒ»¸öÎÄÕÂ½øĞĞÆÀÂÛ£¡");
+			ret.put("msg", "è¯·é€‰æ‹©ä¸€ä¸ªæ–‡ç« è¿›è¡Œè¯„è®ºï¼");
 			return ret;
 		}
 //		if(StringUtils.isEmpty(comment.getNickname())){
 //			ret.put("type", "error");
-//			ret.put("msg", "ÇëÌîĞ´êÇ³Æ£¡");
+//			ret.put("msg", "è¯·å¡«å†™æ˜µç§°ï¼");
 //			return ret;
 //		}
 		if(StringUtils.isEmpty(comment.getContent())){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÆÀÂÛÄÚÈİ£¡");
+			ret.put("msg", "è¯·å¡«å†™è¯„è®ºå†…å®¹ï¼");
 			return ret;
 		}
 		comment.setCreateTime(new Date());
 		comment.setNickname(loginUser.getUsername());
 		if(commentService.add(comment) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "ÆÀÂÛÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+			ret.put("msg", "è¯„è®ºå¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 			return ret;
 		}
-		//ÎÄÕÂÆÀÂÛÊı¼Ó1
+		//æ–‡ç« è¯„è®ºæ•°åŠ 1
 		newsService.updateCommentNumber(comment.getNewsId());
 		ret.put("type", "success");
 		ret.put("createTime", comment.getCreateTime());
@@ -223,7 +223,7 @@ public class HomeNewsController {
 	}
 	
 	/**
-	 * Description:·ÖÒ³»ñÈ¡Ä³Ò»ÎÄÕÂµÄÆÀÂÛ
+	 * Description:åˆ†é¡µè·å–æŸä¸€æ–‡ç« çš„è¯„è®º
 	 * @author   dloxu
 	 * @param
 	 * @return

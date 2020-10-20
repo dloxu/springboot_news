@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Description:新闻评论接口
+ * Description:鏂伴椈璇勮鎺ュ彛
  * @author   dloxu
  * @param
  * @return

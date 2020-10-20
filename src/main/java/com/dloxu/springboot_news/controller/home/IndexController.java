@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Description:Ç°Ì¨Ò³ÃæÊ×Ò³¿ØÖÆÆ÷
+ * Description:å‰å°é¡µé¢é¦–é¡µæ§åˆ¶å™¨
  * @author   dloxu
  * @param
  * @return
@@ -44,7 +44,7 @@ public class IndexController {
 	private LogService logService;
 	
 	/**
-	 * Description:ÏµÍ³Ê×Ò³
+	 * Description:ç³»ç»Ÿé¦–é¡µ
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -62,7 +62,7 @@ public class IndexController {
 	}
 	
 	/**
-	 * Description:»ñÈ¡ÍøÕ¾»ù±¾ĞÅÏ¢
+	 * Description:è·å–ç½‘ç«™åŸºæœ¬ä¿¡æ¯
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -82,7 +82,7 @@ public class IndexController {
 	}
 
 	/**
-	 * Description:»ñÈ¡ÈÕÆÚ
+	 * Description:è·å–æ—¥æœŸ
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -128,11 +128,11 @@ public class IndexController {
 		String username=user.getUsername();
 		User findByUsername = userService.findByUsername(username);
 		if (findByUsername!=null&&username.equals(findByUsername.getUsername())){
-			ret.put("msg","¸ÃÓÃ»§ÒÑ×¢²á");
+			ret.put("msg","è¯¥ç”¨æˆ·å·²æ³¨å†Œ");
 			ret.put("type", "error");
-			logService.add("ÓÃ»§ÃûÎª"+user.getUsername()+"µÄÓÃ»§ÒÑ¾­×¢²á");
+			logService.add("ç”¨æˆ·åä¸º"+user.getUsername()+"çš„ç”¨æˆ·å·²ç»æ³¨å†Œ");
 		}else {
-			ret.put("msg","×¢²á³É¹¦");
+			ret.put("msg","æ³¨å†ŒæˆåŠŸ");
 			ret.put("type", "success");
 			user.setRoleId(2L);
 			userService.registerUser(user);

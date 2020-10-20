@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Description:²Ëµ¥¹ÜÀídao
+ * Description:èœå•ç®¡ç†dao
  * @author   dloxu
  * @param
  * @return

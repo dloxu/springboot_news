@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Description:ĞÂÎÅ¿ØÖÆÆ÷
+ * Description:æ–°é—»æ§åˆ¶å™¨
  * @author   dloxu
  * @param
  * @return
@@ -40,7 +40,7 @@ public class NewsController {
 	private NewsService newsService;
 	
 	/**
-	 * Description:ĞÂÎÅÁĞ±íÒ³Ãæ
+	 * Description:æ–°é—»åˆ—è¡¨é¡µé¢
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -54,7 +54,7 @@ public class NewsController {
 	}
 	
 	/**
-	 * Description:ĞÂÎÅÌí¼ÓÒ³Ãæ
+	 * Description:æ–°é—»æ·»åŠ é¡µé¢
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -68,7 +68,7 @@ public class NewsController {
 	}
 	
 	/**
-	 * Description:ĞÂÎÅÌí¼Ó
+	 * Description:æ–°é—»æ·»åŠ 
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -80,58 +80,58 @@ public class NewsController {
 		Map<String,String> ret = new HashMap<String, String>();
 		if(news == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÕıÈ·µÄĞÅÏ¢£¡");
+			ret.put("msg", "è¯·å¡«å†™æ­£ç¡®çš„ä¿¡æ¯ï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(news.getTitle())){
 			ret.put("type", "error");
-			ret.put("msg", "ĞÂÎÅ±êÌâ²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "æ–°é—»æ ‡é¢˜ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(news.getCategoryId() == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÑ¡ÔñĞÂÎÅ·ÖÀà£¡");
+			ret.put("msg", "è¯·é€‰æ‹©æ–°é—»åˆ†ç±»ï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(news.getAbstrs())){
 			ret.put("type", "error");
-			ret.put("msg", "ĞÂÎÅÕªÒª²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "æ–°é—»æ‘˜è¦ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(news.getTags())){
 			ret.put("type", "error");
-			ret.put("msg", "ĞÂÎÅ±êÇ©²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "æ–°é—»æ ‡ç­¾ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(news.getPhoto())){
 			ret.put("type", "error");
-			ret.put("msg", "ĞÂÎÅ·âÃæÍ¼Æ¬±ØĞëÉÏ´«£¡");
+			ret.put("msg", "æ–°é—»å°é¢å›¾ç‰‡å¿…é¡»ä¸Šä¼ ï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(news.getAuthor())){
 			ret.put("type", "error");
-			ret.put("msg", "ĞÂÎÅ×÷Õß²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "æ–°é—»ä½œè€…ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(news.getContent())){
 			ret.put("type", "error");
-			ret.put("msg", "ĞÂÎÅÄÚÈİ²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "æ–°é—»å†…å®¹ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		news.setCreateTime(new Date());
 		if(newsService.add(news) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "Ìí¼ÓÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+			ret.put("msg", "æ·»åŠ å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "Ìí¼Ó³É¹¦£¡");
+		ret.put("msg", "æ·»åŠ æˆåŠŸï¼");
 		return ret;
 	}
 	
 	
 	/**
-	 * Description:ĞÂÎÅ±à¼­Ò³Ãæ
+	 * Description:æ–°é—»ç¼–è¾‘é¡µé¢
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -146,7 +146,7 @@ public class NewsController {
 	}
 	
 	/**
-	 * Description:ĞÂÎÅĞÅÏ¢±à¼­
+	 * Description:æ–°é—»ä¿¡æ¯ç¼–è¾‘
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -158,56 +158,56 @@ public class NewsController {
 		Map<String,String> ret = new HashMap<String, String>();
 		if(news == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÕıÈ·µÄĞÅÏ¢£¡");
+			ret.put("msg", "è¯·å¡«å†™æ­£ç¡®çš„ä¿¡æ¯ï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(news.getTitle())){
 			ret.put("type", "error");
-			ret.put("msg", "ĞÂÎÅ±êÌâ²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "æ–°é—»æ ‡é¢˜ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(news.getCategoryId() == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÑ¡ÔñĞÂÎÅ·ÖÀà£¡");
+			ret.put("msg", "è¯·é€‰æ‹©æ–°é—»åˆ†ç±»ï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(news.getAbstrs())){
 			ret.put("type", "error");
-			ret.put("msg", "ĞÂÎÅÕªÒª²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "æ–°é—»æ‘˜è¦ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(news.getTags())){
 			ret.put("type", "error");
-			ret.put("msg", "ĞÂÎÅ±êÇ©²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "æ–°é—»æ ‡ç­¾ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(news.getPhoto())){
 			ret.put("type", "error");
-			ret.put("msg", "ĞÂÎÅ·âÃæÍ¼Æ¬±ØĞëÉÏ´«£¡");
+			ret.put("msg", "æ–°é—»å°é¢å›¾ç‰‡å¿…é¡»ä¸Šä¼ ï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(news.getAuthor())){
 			ret.put("type", "error");
-			ret.put("msg", "ĞÂÎÅ×÷Õß²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "æ–°é—»ä½œè€…ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(news.getContent())){
 			ret.put("type", "error");
-			ret.put("msg", "ĞÂÎÅÄÚÈİ²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "æ–°é—»å†…å®¹ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(newsService.edit(news) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "ĞŞ¸ÄÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+			ret.put("msg", "ä¿®æ”¹å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "ĞŞ¸Ä³É¹¦£¡");
+		ret.put("msg", "ä¿®æ”¹æˆåŠŸï¼");
 		return ret;
 	}
 	
 	/**
-	 * Description:É¾³ıĞÂÎÅ
+	 * Description:åˆ é™¤æ–°é—»
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -219,27 +219,27 @@ public class NewsController {
 		Map<String,String> ret = new HashMap<String, String>();
 		if(id == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÑ¡ÔñÒªÉ¾³ıµÄĞÅÏ¢£¡");
+			ret.put("msg", "è¯·é€‰æ‹©è¦åˆ é™¤çš„ä¿¡æ¯ï¼");
 			return ret;
 		}
 		try{
 			if(newsService.delete(id) <= 0){
 				ret.put("type", "error");
-				ret.put("msg", "É¾³ıÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+				ret.put("msg", "åˆ é™¤å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 				return ret;
 			}
 		}catch(Exception e){
 			ret.put("type", "error");
-			ret.put("msg", "¸ÃĞÂÎÅÏÂÓĞÆÀÂÛĞÅÏ¢£¬²»¿ÉÉ¾³ı£¡");
+			ret.put("msg", "è¯¥æ–°é—»ä¸‹æœ‰è¯„è®ºä¿¡æ¯ï¼Œä¸å¯åˆ é™¤ï¼");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "É¾³ı³É¹¦£¡");
+		ret.put("msg", "åˆ é™¤æˆåŠŸï¼");
 		return ret;
 	}
 	
 	/**
-	 * Description:·ÖÒ³Ä£ºıËÑË÷²éÑ¯ÁĞ±í
+	 * Description:åˆ†é¡µæ¨¡ç³Šæœç´¢æŸ¥è¯¢åˆ—è¡¨
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -268,7 +268,7 @@ public class NewsController {
 	}
 	
 	/**
-	 * Description:ÉÏ´«Í¼Æ¬
+	 * Description:ä¸Šä¼ å›¾ç‰‡
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -280,42 +280,42 @@ public class NewsController {
 		Map<String, String> ret = new HashMap<String, String>();
 		if(photo == null){
 			ret.put("type", "error");
-			ret.put("msg", "Ñ¡ÔñÒªÉÏ´«µÄÎÄ¼ş£¡");
+			ret.put("msg", "é€‰æ‹©è¦ä¸Šä¼ çš„æ–‡ä»¶ï¼");
 			return ret;
 		}
 		if(photo.getSize() > 1024*1024*1024){
 			ret.put("type", "error");
-			ret.put("msg", "ÎÄ¼ş´óĞ¡²»ÄÜ³¬¹ı10M£¡");
+			ret.put("msg", "æ–‡ä»¶å¤§å°ä¸èƒ½è¶…è¿‡10Mï¼");
 			return ret;
 		}
-		//»ñÈ¡ÎÄ¼şºó×º
+		//è·å–æ–‡ä»¶åç¼€
 		String suffix = photo.getOriginalFilename().substring(photo.getOriginalFilename().lastIndexOf(".")+1,photo.getOriginalFilename().length());
 		if(!"jpg,jpeg,gif,png".toUpperCase().contains(suffix.toUpperCase())){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÑ¡Ôñjpg,jpeg,gif,png¸ñÊ½µÄÍ¼Æ¬£¡");
+			ret.put("msg", "è¯·é€‰æ‹©jpg,jpeg,gif,pngæ ¼å¼çš„å›¾ç‰‡ï¼");
 			return ret;
 		}
 		String savePath = request.getServletContext().getRealPath("/") + "/static/upload/";
 		File savePathFile = new File(savePath);
 		if(!savePathFile.exists()){
-			//Èô²»´æÔÚ¸ÄÄ¿Â¼£¬Ôò´´½¨Ä¿Â¼
+			//è‹¥ä¸å­˜åœ¨æ”¹ç›®å½•ï¼Œåˆ™åˆ›å»ºç›®å½•
 			savePathFile.mkdir();
 		}
-		Date date=new Date();//´ËÊ±dateÎªµ±Ç°µÄÊ±¼ä
-		SimpleDateFormat dateFormat=new SimpleDateFormat("YYYY-MM-dd");//ÉèÖÃµ±Ç°Ê±¼äµÄ¸ñÊ½£¬ÎªÄê-ÔÂ-ÈÕ
+		Date date=new Date();//æ­¤æ—¶dateä¸ºå½“å‰çš„æ—¶é—´
+		SimpleDateFormat dateFormat=new SimpleDateFormat("YYYY-MM-dd");//è®¾ç½®å½“å‰æ—¶é—´çš„æ ¼å¼ï¼Œä¸ºå¹´-æœˆ-æ—¥
 		String filename = dateFormat.format(date)+"."+suffix;
 		try {
-			//½«ÎÄ¼ş±£´æÖÁÖ¸¶¨Ä¿Â¼
+			//å°†æ–‡ä»¶ä¿å­˜è‡³æŒ‡å®šç›®å½•
 			photo.transferTo(new File(savePath+filename));
 		}catch (Exception e) {
 			// TODO Auto-generated catch block
 			ret.put("type", "error");
-			ret.put("msg", "±£´æÎÄ¼şÒì³££¡");
+			ret.put("msg", "ä¿å­˜æ–‡ä»¶å¼‚å¸¸ï¼");
 			e.printStackTrace();
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "ÓÃ»§ÉÏ´«Í¼Æ¬³É¹¦£¡");
+		ret.put("msg", "ç”¨æˆ·ä¸Šä¼ å›¾ç‰‡æˆåŠŸï¼");
 		ret.put("filepath",request.getServletContext().getContextPath() + "/static/upload/" + filename );
 		return ret;
 	}

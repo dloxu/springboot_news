@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * Description:权限实现类dao
+ * Description:鏉冮檺瀹炵幇绫籨ao
  * @author   dloxu
  * @param
  * @return

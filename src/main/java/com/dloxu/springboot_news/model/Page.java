@@ -3,7 +3,7 @@ package com.dloxu.springboot_news.model;
 import org.springframework.stereotype.Component;
 
 /**
- * Description:分页基本信息
+ * Description:鍒嗛〉鍩烘湰淇℃伅
  * @author   dloxu
  * @param
  * @return
@@ -11,11 +11,11 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Page {
-	private int page = 1;//当前页码
+	private int page = 1;//褰撳墠椤电爜
 	
-	private int rows;//每页显示数量
+	private int rows;//姣忛〉鏄剧ず鏁伴噺
 	
-	private int offset;//对应数据库中的偏移量
+	private int offset;//瀵瑰簲鏁版嵁搴撲腑鐨勫亸绉婚噺
 
 	public int getPage() {
 		return page;

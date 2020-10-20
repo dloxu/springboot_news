@@ -3,7 +3,7 @@ package com.dloxu.springboot_news.model;
 import org.springframework.stereotype.Component;
 
 /**
- * Description:²Ëµ¥ÊµÌåÀà
+ * Description:èœå•å®ä½“ç±»
  * @author   dloxu
  * @param
  * @return
@@ -12,11 +12,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class Menu {
 	private Long id;
-	private Long parentId;//¸¸Ààid
-	private Long _parentId;//¸¸Ààid,ÓÃÀ´Æ¥ÅäeasyuiµÄ¸¸Ààid
-	private String name;//²Ëµ¥Ãû³Æ
-	private String url;//µã»÷ºóµÄurl
-	private String icon;//²Ëµ¥iconÍ¼±í
+	private Long parentId;//çˆ¶ç±»id
+	private Long _parentId;//çˆ¶ç±»id,ç”¨æ¥åŒ¹é…easyuiçš„çˆ¶ç±»id
+	private String name;//èœå•åç§°
+	private String url;//ç‚¹å‡»åçš„url
+	private String icon;//èœå•iconå›¾è¡¨
 	public Long getId() {
 		return id;
 	}

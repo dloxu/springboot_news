@@ -3,7 +3,7 @@ package com.dloxu.springboot_news.model;
 import org.springframework.stereotype.Component;
 
 /**
- * Description:ÓÃ»§ÊµÌåÀà
+ * Description:ç”¨æˆ·å®ä½“ç±»
  * @author   dloxu
  * @param
  * @return
@@ -11,15 +11,15 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class User {
-	private Long id;//ÓÃ»§id£¬ÉèÖÃ×ÔÔö
-	private String username;//ÓÃ»§Ãû£¬µÇÂ¼Ãû
-	private String password;//µÇÂ¼ÃÜÂë
-	private String passwordAgain; //ÖØ¸´µÇÂ¼ÃÜÂë
-	private Long roleId;//ËùÊô½ÇÉ«id
-	private String photo;//Í·ÏñÕÕÆ¬µØÖ·
-	private int sex;//ĞÔ±ğ0,´ú±íÎ´Öª£¬1´ú±íÄĞ£¬2´ú±íÅ®
-	private Integer age;//ÄêÁä
-	private String address;//¼ÒÍ¥×¡Ö·
+	private Long id;//ç”¨æˆ·idï¼Œè®¾ç½®è‡ªå¢
+	private String username;//ç”¨æˆ·åï¼Œç™»å½•å
+	private String password;//ç™»å½•å¯†ç 
+	private String passwordAgain; //é‡å¤ç™»å½•å¯†ç 
+	private Long roleId;//æ‰€å±è§’è‰²id
+	private String photo;//å¤´åƒç…§ç‰‡åœ°å€
+	private int sex;//æ€§åˆ«0,ä»£è¡¨æœªçŸ¥ï¼Œ1ä»£è¡¨ç”·ï¼Œ2ä»£è¡¨å¥³
+	private Integer age;//å¹´é¾„
+	private String address;//å®¶åº­ä½å€
 	public Long getId() {
 		return id;
 	}

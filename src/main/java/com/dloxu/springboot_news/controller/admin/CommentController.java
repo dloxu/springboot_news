@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Description:ĞÂÎÅÆÀÂÛ¿ØÖÆÆ÷
+ * Description:æ–°é—»è¯„è®ºæ§åˆ¶å™¨
  * @author   dloxu
  * @param
  * @return
@@ -36,7 +36,7 @@ public class CommentController {
 	private CommentService commentService;
 	
 	/**
-	 * Description:ĞÂÎÅÆÀÂÛÁĞ±íÒ³Ãæ
+	 * Description:æ–°é—»è¯„è®ºåˆ—è¡¨é¡µé¢
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -53,7 +53,7 @@ public class CommentController {
 	}
 	
 	/**
-	 * Description:ĞÂÎÅÆÀÂÛÌí¼Ó
+	 * Description:æ–°é—»è¯„è®ºæ·»åŠ 
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -65,39 +65,39 @@ public class CommentController {
 		Map<String,String> ret = new HashMap<String, String>();
 		if(comment == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÕıÈ·µÄÆÀÂÛĞÅÏ¢£¡");
+			ret.put("msg", "è¯·å¡«å†™æ­£ç¡®çš„è¯„è®ºä¿¡æ¯ï¼");
 			return ret;
 		}
 		if(comment.getNewsId() == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÑ¡ÔñÒªÆÀÂÛµÄĞÂÎÅ£¡");
+			ret.put("msg", "è¯·é€‰æ‹©è¦è¯„è®ºçš„æ–°é—»ï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(comment.getNickname())){
 			ret.put("type", "error");
-			ret.put("msg", "ÆÀÂÛêÇ³Æ²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "è¯„è®ºæ˜µç§°ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(comment.getContent())){
 			ret.put("type", "error");
-			ret.put("msg", "ÆÀÂÛÄÚÈİ²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "è¯„è®ºå†…å®¹ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		comment.setCreateTime(new Date());
 		if(commentService.add(comment) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "ÆÀÂÛÌí¼ÓÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+			ret.put("msg", "è¯„è®ºæ·»åŠ å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "Ìí¼Ó³É¹¦£¡");
-		//ĞÂÎÅÆÀÂÛÊıÁ¿¼Ó1
+		ret.put("msg", "æ·»åŠ æˆåŠŸï¼");
+		//æ–°é—»è¯„è®ºæ•°é‡åŠ 1
 		newsService.updateCommentNumber(comment.getNewsId());
 		return ret;
 	}
 	
 	/**
-	 * Description:ĞÂÎÅÆÀÂÛĞÅÏ¢±à¼­
+	 * Description:æ–°é—»è¯„è®ºä¿¡æ¯ç¼–è¾‘
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -109,36 +109,36 @@ public class CommentController {
 		Map<String,String> ret = new HashMap<String, String>();
 		if(comment == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÕıÈ·µÄÆÀÂÛĞÅÏ¢£¡");
+			ret.put("msg", "è¯·å¡«å†™æ­£ç¡®çš„è¯„è®ºä¿¡æ¯ï¼");
 			return ret;
 		}
 		if(comment.getNewsId() == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÑ¡ÔñÒªÆÀÂÛµÄĞÂÎÅ£¡");
+			ret.put("msg", "è¯·é€‰æ‹©è¦è¯„è®ºçš„æ–°é—»ï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(comment.getNickname())){
 			ret.put("type", "error");
-			ret.put("msg", "ÆÀÂÛêÇ³Æ²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "è¯„è®ºæ˜µç§°ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(comment.getContent())){
 			ret.put("type", "error");
-			ret.put("msg", "ÆÀÂÛÄÚÈİ²»ÄÜÎª¿Õ£¡");
+			ret.put("msg", "è¯„è®ºå†…å®¹ä¸èƒ½ä¸ºç©ºï¼");
 			return ret;
 		}
 		if(commentService.edit(comment) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "ÆÀÂÛĞŞ¸ÄÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+			ret.put("msg", "è¯„è®ºä¿®æ”¹å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "ĞŞ¸Ä³É¹¦£¡");
+		ret.put("msg", "ä¿®æ”¹æˆåŠŸï¼");
 		return ret;
 	}
 	
 	/**
-	 * Description:É¾³ıĞÂÎÅÆÀÂÛ
+	 * Description:åˆ é™¤æ–°é—»è¯„è®º
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -150,7 +150,7 @@ public class CommentController {
 		Map<String,String> ret = new HashMap<String, String>();
 		if(ids == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÑ¡ÔñÒªÉ¾³ıµÄÆÀÂÛĞÅÏ¢£¡");
+			ret.put("msg", "è¯·é€‰æ‹©è¦åˆ é™¤çš„è¯„è®ºä¿¡æ¯ï¼");
 			return ret;
 		}
 		if(ids.contains(",")){
@@ -158,16 +158,16 @@ public class CommentController {
 		}
 		if(commentService.delete(ids) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "ÆÀÂÛÉ¾³ıÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+			ret.put("msg", "è¯„è®ºåˆ é™¤å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "É¾³ı³É¹¦£¡");
+		ret.put("msg", "åˆ é™¤æˆåŠŸï¼");
 		return ret;
 	}
 	
 	/**
-	 * Description:·ÖÒ³Ä£ºıËÑË÷²éÑ¯ÁĞ±í
+	 * Description:åˆ†é¡µæ¨¡ç³Šæœç´¢æŸ¥è¯¢åˆ—è¡¨
 	 * @author   dloxu
 	 * @param
 	 * @return

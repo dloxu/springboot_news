@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 /**
- * Description:新闻评论实体
+ * Description:鏂伴椈璇勮瀹炰綋
  * @author   dloxu
  * @param
  * @return
@@ -14,10 +14,10 @@ import java.util.Date;
 @Component
 public class Comment {
 	private Long id;
-	private Long newsId;//新闻id
-	private News news;//新闻实体
-	private String nickname;//昵称
-	private String content;//评论内容
+	private Long newsId;//鏂伴椈id
+	private News news;//鏂伴椈瀹炰綋
+	private String nickname;//鏄电О
+	private String content;//璇勮鍐呭
 	private Date createTime;
 	public Long getId() {
 		return id;

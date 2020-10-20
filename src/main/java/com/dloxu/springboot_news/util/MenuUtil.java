@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ¹ØÓÚ²Ëµ¥²Ù×÷µÄÒ»Ğ©¹«ÓÃ·½·¨
+ * å…³äºèœå•æ“ä½œçš„ä¸€äº›å…¬ç”¨æ–¹æ³•
  * @author llq
  *
  */
 public class MenuUtil {
 
 	/**
-	 * Description:´Ó¸ø¶¨µÄ²Ëµ¥ÖĞ·µ»ØËùÓĞ¶¥¼¶²Ëµ¥
+	 * Description:ä»ç»™å®šçš„èœå•ä¸­è¿”å›æ‰€æœ‰é¡¶çº§èœå•
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -31,7 +31,7 @@ public class MenuUtil {
 	}
 	
 	/**
-	 * Description:»ñÈ¡ËùÓĞµÄ¶ş¼¶²Ëµ¥
+	 * Description:è·å–æ‰€æœ‰çš„äºŒçº§èœå•
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -52,7 +52,7 @@ public class MenuUtil {
 	}
 	
 	/**
-	 * Description:»ñÈ¡Ä³¸ö¶ş¼¶²Ëµ¥ÏÂµÄ°´Å¥
+	 * Description:è·å–æŸä¸ªäºŒçº§èœå•ä¸‹çš„æŒ‰é’®
 	 * @author   dloxu
 	 * @param
 	 * @return

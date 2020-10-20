@@ -11,7 +11,7 @@ import java.util.Map;
 
 
 /**
- * Description:角色role的实现类
+ * Description:瑙掕壊role鐨勫疄鐜扮被
  * @author   dloxu
  * @param
  * @return

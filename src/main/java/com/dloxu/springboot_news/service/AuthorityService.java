@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Description:权限service接口
+ * Description:鏉冮檺service鎺ュ彛
  * @author   dloxu
  * @param
  * @return

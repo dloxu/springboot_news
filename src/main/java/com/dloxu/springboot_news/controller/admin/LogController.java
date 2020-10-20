@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Description:ÈÕÖ¾¹ÜÀí¿ØÖÆÆ÷
+ * Description:æ—¥å¿—ç®¡ç†æ§åˆ¶å™¨
  *
  * @param
  * @author dloxu
@@ -31,7 +31,7 @@ public class LogController {
     private LogService logService;
 
     /**
-     * Description:ÈÕÖ¾ÁĞ±íÒ³Ãæ
+     * Description:æ—¥å¿—åˆ—è¡¨é¡µé¢
      *
      * @param
      * @return
@@ -45,7 +45,7 @@ public class LogController {
     }
 
     /**
-     * Description:»ñÈ¡ÈÕÖ¾ÁĞ±í
+     * Description:è·å–æ—¥å¿—åˆ—è¡¨
      *
      * @param
      * @return
@@ -68,7 +68,7 @@ public class LogController {
     }
 
    /**
-    * Description:Ìí¼ÓÈÕÖ¾
+    * Description:æ·»åŠ æ—¥å¿—
     * @author   dloxu
     * @param
     * @return
@@ -80,28 +80,28 @@ public class LogController {
         Map<String, String> ret = new HashMap<String, String>();
         if (log == null) {
             ret.put("type", "error");
-            ret.put("msg", "ÇëÌîĞ´ÕıÈ·µÄÈÕÖ¾ĞÅÏ¢£¡");
+            ret.put("msg", "è¯·å¡«å†™æ­£ç¡®çš„æ—¥å¿—ä¿¡æ¯ï¼");
             return ret;
         }
         if (StringUtils.isEmpty(log.getContent())) {
             ret.put("type", "error");
-            ret.put("msg", "ÇëÌîĞ´ÈÕÖ¾ÄÚÈİ£¡");
+            ret.put("msg", "è¯·å¡«å†™æ—¥å¿—å†…å®¹ï¼");
             return ret;
         }
         log.setCreateTime(new Date());
         if (logService.add(log) <= 0) {
             ret.put("type", "error");
-            ret.put("msg", "ÈÕÖ¾Ìí¼ÓÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+            ret.put("msg", "æ—¥å¿—æ·»åŠ å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
             return ret;
         }
         ret.put("type", "success");
-        ret.put("msg", "ÈÕÖ¾Ìí¼Ó³É¹¦£¡");
+        ret.put("msg", "æ—¥å¿—æ·»åŠ æˆåŠŸï¼");
         return ret;
     }
 
 
     /**
-     * Description:ÅúÁ¿É¾³ıÈÕÖ¾
+     * Description:æ‰¹é‡åˆ é™¤æ—¥å¿—
      * @author   dloxu
      * @param
      * @return
@@ -113,7 +113,7 @@ public class LogController {
         Map<String, String> ret = new HashMap<String, String>();
         if (StringUtils.isEmpty(ids)) {
             ret.put("type", "error");
-            ret.put("msg", "Ñ¡ÔñÒªÉ¾³ıµÄÊı¾İ£¡");
+            ret.put("msg", "é€‰æ‹©è¦åˆ é™¤çš„æ•°æ®ï¼");
             return ret;
         }
         if (ids.contains(",")) {
@@ -121,11 +121,11 @@ public class LogController {
         }
         if (logService.delete(ids) <= 0) {
             ret.put("type", "error");
-            ret.put("msg", "ÈÕÖ¾É¾³ıÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+            ret.put("msg", "æ—¥å¿—åˆ é™¤å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
             return ret;
         }
         ret.put("type", "success");
-        ret.put("msg", "ÈÕÖ¾É¾³ı³É¹¦£¡");
+        ret.put("msg", "æ—¥å¿—åˆ é™¤æˆåŠŸï¼");
         return ret;
     }
 

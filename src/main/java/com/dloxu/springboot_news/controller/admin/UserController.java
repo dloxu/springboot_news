@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Description:ÓÃ»§¹ÜÀí¿ØÖÆÆ÷
+ * Description:ç”¨æˆ·ç®¡ç†æ§åˆ¶å™¨
  * @author   dloxu
  * @param
  * @return
@@ -37,7 +37,7 @@ public class UserController {
 	private RoleService roleService;
 	
 	/**
-	 * Description:ÓÃ»§ÁĞ±íÒ³Ãæ
+	 * Description:ç”¨æˆ·åˆ—è¡¨é¡µé¢
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -52,7 +52,7 @@ public class UserController {
 	}
 	
 	/**
-	 * Description:»ñÈ¡ÓÃ»§ÁĞ±í
+	 * Description:è·å–ç”¨æˆ·åˆ—è¡¨
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -78,7 +78,7 @@ public class UserController {
 	}
 	
 	/**
-	 * Description:Ìí¼ÓÓÃ»§
+	 * Description:æ·»åŠ ç”¨æˆ·
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -90,41 +90,41 @@ public class UserController {
 		Map<String, String> ret = new HashMap<String, String>();
 		if(user == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÕıÈ·µÄÓÃ»§ĞÅÏ¢£¡");
+			ret.put("msg", "è¯·å¡«å†™æ­£ç¡®çš„ç”¨æˆ·ä¿¡æ¯ï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(user.getUsername())){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÓÃ»§Ãû£¡");
+			ret.put("msg", "è¯·å¡«å†™ç”¨æˆ·åï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(user.getPassword())){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÃÜÂë£¡");
+			ret.put("msg", "è¯·å¡«å†™å¯†ç ï¼");
 			return ret;
 		}
 		if(user.getRoleId() == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÑ¡ÔñËùÊô½ÇÉ«£¡");
+			ret.put("msg", "è¯·é€‰æ‹©æ‰€å±è§’è‰²ï¼");
 			return ret;
 		}
 		if(isExist(user.getUsername(), 0l)){
 			ret.put("type", "error");
-			ret.put("msg", "¸ÃÓÃ»§ÃûÒÑ¾­´æÔÚ£¬ÇëÖØĞÂÊäÈë£¡");
+			ret.put("msg", "è¯¥ç”¨æˆ·åå·²ç»å­˜åœ¨ï¼Œè¯·é‡æ–°è¾“å…¥ï¼");
 			return ret;
 		}
 		if(userService.add(user) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "ÓÃ»§Ìí¼ÓÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+			ret.put("msg", "ç”¨æˆ·æ·»åŠ å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "½ÇÉ«Ìí¼Ó³É¹¦£¡");
+		ret.put("msg", "è§’è‰²æ·»åŠ æˆåŠŸï¼");
 		return ret;
 	}
 	
 	/**
-	 * Description:±à¼­ÓÃ»§
+	 * Description:ç¼–è¾‘ç”¨æˆ·
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -136,41 +136,41 @@ public class UserController {
 		Map<String, String> ret = new HashMap<String, String>();
 		if(user == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÕıÈ·µÄÓÃ»§ĞÅÏ¢£¡");
+			ret.put("msg", "è¯·å¡«å†™æ­£ç¡®çš„ç”¨æˆ·ä¿¡æ¯ï¼");
 			return ret;
 		}
 		if(StringUtils.isEmpty(user.getUsername())){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÌîĞ´ÓÃ»§Ãû£¡");
+			ret.put("msg", "è¯·å¡«å†™ç”¨æˆ·åï¼");
 			return ret;
 		}
 //		if(StringUtils.isEmpty(user.getPassword())){
 //			ret.put("type", "error");
-//			ret.put("msg", "ÇëÌîĞ´ÃÜÂë£¡");
+//			ret.put("msg", "è¯·å¡«å†™å¯†ç ï¼");
 //			return ret;
 //		}
 		if(user.getRoleId() == null){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÑ¡ÔñËùÊô½ÇÉ«£¡");
+			ret.put("msg", "è¯·é€‰æ‹©æ‰€å±è§’è‰²ï¼");
 			return ret;
 		}
 		if(isExist(user.getUsername(), user.getId())){
 			ret.put("type", "error");
-			ret.put("msg", "¸ÃÓÃ»§ÃûÒÑ¾­´æÔÚ£¬ÇëÖØĞÂÊäÈë£¡");
+			ret.put("msg", "è¯¥ç”¨æˆ·åå·²ç»å­˜åœ¨ï¼Œè¯·é‡æ–°è¾“å…¥ï¼");
 			return ret;
 		}
 		if(userService.edit(user) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "ÓÃ»§Ìí¼ÓÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+			ret.put("msg", "ç”¨æˆ·æ·»åŠ å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "½ÇÉ«Ìí¼Ó³É¹¦£¡");
+		ret.put("msg", "è§’è‰²æ·»åŠ æˆåŠŸï¼");
 		return ret;
 	}
 	
 	/**
-	 * Description:ÅúÁ¿É¾³ıÓÃ»§
+	 * Description:æ‰¹é‡åˆ é™¤ç”¨æˆ·
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -182,7 +182,7 @@ public class UserController {
 		Map<String, String> ret = new HashMap<String, String>();
 		if(StringUtils.isEmpty(ids)){
 			ret.put("type", "error");
-			ret.put("msg", "Ñ¡ÔñÒªÉ¾³ıµÄÊı¾İ£¡");
+			ret.put("msg", "é€‰æ‹©è¦åˆ é™¤çš„æ•°æ®ï¼");
 			return ret;
 		}
 		if(ids.contains(",")){
@@ -190,16 +190,16 @@ public class UserController {
 		}
 		if(userService.delete(ids) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "ÓÃ»§É¾³ıÊ§°Ü£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+			ret.put("msg", "ç”¨æˆ·åˆ é™¤å¤±è´¥ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "ÓÃ»§É¾³ı³É¹¦£¡");
+		ret.put("msg", "ç”¨æˆ·åˆ é™¤æˆåŠŸï¼");
 		return ret;
 	}
 	
 	/**
-	 * Description:ÉÏ´«Í¼Æ¬
+	 * Description:ä¸Šä¼ å›¾ç‰‡
 	 * @author   dloxu
 	 * @param
 	 * @return
@@ -211,46 +211,46 @@ public class UserController {
 		Map<String, String> ret = new HashMap<String, String>();
 		if(photo == null){
 			ret.put("type", "error");
-			ret.put("msg", "Ñ¡ÔñÒªÉÏ´«µÄÎÄ¼ş£¡");
+			ret.put("msg", "é€‰æ‹©è¦ä¸Šä¼ çš„æ–‡ä»¶ï¼");
 			return ret;
 		}
 		if(photo.getSize() > 1024*1024*1024){
 			ret.put("type", "error");
-			ret.put("msg", "ÎÄ¼ş´óĞ¡²»ÄÜ³¬¹ı10M£¡");
+			ret.put("msg", "æ–‡ä»¶å¤§å°ä¸èƒ½è¶…è¿‡10Mï¼");
 			return ret;
 		}
-		//»ñÈ¡ÎÄ¼şºó×º
+		//è·å–æ–‡ä»¶åç¼€
 		String suffix = photo.getOriginalFilename().substring(photo.getOriginalFilename().lastIndexOf(".")+1,photo.getOriginalFilename().length());
 		if(!"jpg,jpeg,gif,png".toUpperCase().contains(suffix.toUpperCase())){
 			ret.put("type", "error");
-			ret.put("msg", "ÇëÑ¡Ôñjpg,jpeg,gif,png¸ñÊ½µÄÍ¼Æ¬£¡");
+			ret.put("msg", "è¯·é€‰æ‹©jpg,jpeg,gif,pngæ ¼å¼çš„å›¾ç‰‡ï¼");
 			return ret;
 		}
 		String savePath = request.getServletContext().getRealPath("/") + "/static/upload/";
 		File savePathFile = new File(savePath);
 		if(!savePathFile.exists()){
-			//Èô²»´æÔÚ¸ÄÄ¿Â¼£¬Ôò´´½¨Ä¿Â¼
+			//è‹¥ä¸å­˜åœ¨æ”¹ç›®å½•ï¼Œåˆ™åˆ›å»ºç›®å½•
 			savePathFile.mkdir();
 		}
 		String filename = new Date().getTime()+"."+suffix;
 		try {
-			//½«ÎÄ¼ş±£´æÖÁÖ¸¶¨Ä¿Â¼
+			//å°†æ–‡ä»¶ä¿å­˜è‡³æŒ‡å®šç›®å½•
 			photo.transferTo(new File(savePath+filename));
 		}catch (Exception e) {
 			// TODO Auto-generated catch block
 			ret.put("type", "error");
-			ret.put("msg", "±£´æÎÄ¼şÒì³££¡");
+			ret.put("msg", "ä¿å­˜æ–‡ä»¶å¼‚å¸¸ï¼");
 			e.printStackTrace();
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "ÕÕÆ¬ÉÏ´«³É¹¦£¡");
+		ret.put("msg", "ç…§ç‰‡ä¸Šä¼ æˆåŠŸï¼");
 		ret.put("filepath",request.getServletContext().getContextPath() + "/static/upload/" + filename );
 		return ret;
 	}
 
 	/**
-	 * Description:ÅĞ¶Ï¸ÃÓÃ»§ÃûÊÇ·ñ´æÔÚ
+	 * Description:åˆ¤æ–­è¯¥ç”¨æˆ·åæ˜¯å¦å­˜åœ¨
 	 * @author   dloxu
 	 * @param
 	 * @return

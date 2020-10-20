@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Description:新闻分类dao
+ * Description:鏂伴椈鍒嗙被dao
  * @author   dloxu
  * @param
  * @return

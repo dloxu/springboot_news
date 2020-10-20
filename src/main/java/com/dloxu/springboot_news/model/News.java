@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 /**
- * Description:ĞÂÎÅÊµÌå
+ * Description:æ–°é—»å®ä½“
  * @author   dloxu
  * @param
  * @return
@@ -14,17 +14,17 @@ import java.util.Date;
 @Component
 public class News {
 	private Long id;
-	private Long categoryId;//·ÖÀàid
-	private NewsCategory newsCategory;//·ÖÀàÊµÌå
-	private String title;//ĞÂÎÅ±êÌâ
-	private String abstrs;//ĞÂÎÅÕªÒª
-	private String tags;//ĞÂÎÅ±êÇ©
-	private String photo;//ĞÂÎÅ·âÃæÍ¼Æ¬
-	private String author;//×÷Õß
-	private String content;//ĞÂÎÅÄÚÈİ
-	private Integer viewNumber = 0;//ä¯ÀÀÁ¿
-	private Integer commentNumber = 0;//ÆÀÂÛÊıÁ¿
-	private Date createTime;//·¢²¼Ê±¼ä
+	private Long categoryId;//åˆ†ç±»id
+	private NewsCategory newsCategory;//åˆ†ç±»å®ä½“
+	private String title;//æ–°é—»æ ‡é¢˜
+	private String abstrs;//æ–°é—»æ‘˜è¦
+	private String tags;//æ–°é—»æ ‡ç­¾
+	private String photo;//æ–°é—»å°é¢å›¾ç‰‡
+	private String author;//ä½œè€…
+	private String content;//æ–°é—»å†…å®¹
+	private Integer viewNumber = 0;//æµè§ˆé‡
+	private Integer commentNumber = 0;//è¯„è®ºæ•°é‡
+	private Date createTime;//å‘å¸ƒæ—¶é—´
 	
 	public Long getId() {
 		return id;
